@@ -14,7 +14,7 @@ Pour le moment l'outil ne sers qu'à supprimer le texte dans un pdf pour créer 
 Comme tous les projets sur github vous pouvez le télécharger en le clonant :
 
 
-´´´bash
+´´´
 $ git clone ...
 $ pip install Pypdf
 $ pip install django
