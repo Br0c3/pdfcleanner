@@ -1,0 +1,31 @@
+{% comment %}
+  ce template est le template de suppression du texte dans un pdf et pour le moment c'est le template principal
+{% endcomment %}
+{% extends "base.html" %}
+
+{% block content %}
+{% comment %}
+ ce block ne contient que le formulaire de récupération du fichier pdf et de son nom
+{% endcomment %}
+<form action={% url "index" %} method="post" enctype="multipart/form-data" class=" position-absolute top-50 start-50 translate-middle bg-info w-auto rounded">
+    {% csrf_token %}
+    <div class="mx-3">
+    
+        <label for="file" class="form-label mx-2 my-2">Choose your pdf file</label> 
+        <p class="mx-auto my-2">
+            {{ form }}
+        </p>
+        <div id="fileHelpId" class="form-text mx-2 my-2">Give a name to the file and upload it to delete the editable texts</div>
+
+        <button
+        type="submit"
+        class="btn btn-primary mx-2 my-2">
+        remove texte
+    </button>
+    </div>
+
+    
+    
+</form>
+
+{% endblock content %}
