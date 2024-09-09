@@ -27,7 +27,9 @@ $ pip install django
 
 Il suffit de se rendre dans le dossier pdfcleaner/pdfcleanner , puis de lancer le serveur en utilisant la l'instruction suivant :
 
-´´´bash
+´´´
+
 $ ./manage.py runserver
+
 ´´´
 Et de se rendre sur le lien indiquer, puis entrer le titre du fichier et sélectionner le fichier pdf . Dès que vous validez le formulaire le template du fichier pdf est automatiquement télécharger
