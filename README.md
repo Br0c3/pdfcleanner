@@ -13,10 +13,8 @@ Pour le moment l'outil ne sers qu'à supprimer le texte dans un pdf pour créer 
 
 Comme tous les projets sur github vous pouvez le télécharger en le clonant :
 
-
-<<<<<<< HEAD
 ```bash
-$ git clone ...
+$ git clone https://github.com/Br0c3/pdfcleanner.git
 $ pip install Pypdf
 $ pip install django
 ```
