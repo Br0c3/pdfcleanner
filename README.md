@@ -16,31 +16,17 @@ Comme tous les projets sur github vous pouvez le télécharger en le clonant :
 
 <<<<<<< HEAD
 ```bash
-=======
-´´´
->>>>>>> origin/main
 $ git clone ...
-
 $ pip install Pypdf
-
 $ pip install django
 ```
-
 
 ### UTILISATION
 
 Il suffit de se rendre dans le dossier pdfcleaner/pdfcleanner , puis de lancer le serveur en utilisant la l'instruction suivant :
 
-<<<<<<< HEAD
 ```bash
 $ ./manage.py runserver
 ```
-=======
-´´´
 
-$ ./manage.py runserver
-
-´´´
-
->>>>>>> origin/main
 Et de se rendre sur le lien indiquer, puis entrer le titre du fichier et sélectionner le fichier pdf . Dès que vous validez le formulaire le template du fichier pdf est automatiquement télécharger
