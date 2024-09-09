@@ -1,4 +1,4 @@
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, HttpResponseBadRequest
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from .forms import UploadFileForm
@@ -21,9 +21,15 @@ def index (request):
         #vérifier la validiter du fomulaire
         if form.is_valid():
             #recupérer le nom du fichier entrer dans le formulaire
+            file = request.FILES["file"]
+
+            #vérifier si le fichier est vraiment un pdf
+            if file.content_type is not "application/pdf" :
+                return HttpResponseBadRequest('type de fichier non supporter')
+            #recupérer le nom du fichier entrer dans le formulaire
             file_name = request.POST['file_name']
             #uploadFile(request.FILES["file"], file_name)
-            fName = clean(request.FILES["file"], file_name) #créer le template en appelant la fonction clean
+            fName = clean( file, file_name) #créer le template en appelant la fonction clean
             mine_type = "application/pdf" #determiner le type de fichier a envoyer dans la reponce
             response = HttpResponse(fName, content_type=mine_type) # construire la reponce http
             response['Content-Disposition'] = "attachement; filename= template_" + file_name + ".pdf" #customiser la reponce http en ajoutant le nom du fichier 
