@@ -16,7 +16,9 @@ Comme tous les projets sur github vous pouvez le télécharger en le clonant :
 
 ´´´
 $ git clone ...
+
 $ pip install Pypdf
+
 $ pip install django
 ´´´
 
