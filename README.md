@@ -15,8 +15,7 @@ Comme tous les projets sur github vous pouvez le télécharger en le clonant :
 
 ```bash
 $ git clone https://github.com/Br0c3/pdfcleanner.git
-$ pip install Pypdf
-$ pip install django
+$ pip install -r requirement.txt
 ```
 
 ### UTILISATION
