@@ -1,4 +1,4 @@
-from django.http import HttpResponseRedirect, HttpResponse, HttpResponseBadRequest
+from django.http import HttpResponse, HttpResponseBadRequest
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from .forms import UploadFileForm
